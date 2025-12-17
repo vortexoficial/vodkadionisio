@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dionísio une espírito rebelde e cuidado artesanal em duas linhas: Gin London Dry e Vodka premium.">
+    <title>Dionísio — Gin & Vodka | Bebidas artesanais que vendem experiências</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Germania+One&family=Pinyon+Script&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+
+    <div class="hero-fixed-bg">
+        <video autoplay muted loop playsinline class="bg-video-mobile">
+            <source src="img/video.mp4" type="video/mp4">
+        </video>
+        <video autoplay muted loop playsinline class="bg-video-desktop">
+            <source src="img/video2.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <div id="age-gate"> 
+        <div class="age-content">
+            <div class="logo" style="margin-bottom: 20px; font-size: 3.5rem; justify-content: center;">
+                <img src="img/logob.png" alt="Dionísio" class="logo-img logo-b">
+                <img src="img/logop.png" alt="Dionísio" class="logo-img logo-p">
+            </div>
+            
+            <h3 style="margin-bottom: 15px; color: #fff; font-weight: 700; text-transform: uppercase; font-size: 1.2rem; letter-spacing: 1px;">
+                Você tem mais de 18 anos?
+            </h3>
+            
+            <p style="margin-bottom: 20px; color: #fff; opacity: 1; font-size: 1.1rem; font-weight: 400;">
+                Digite seu ano de nascimento
+            </p>
+
+            <div class="age-input-wrapper">
+                <input type="tel" id="age-year" placeholder="AAAA" maxlength="4" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+                <br>
+                <button class="btn-enter" onclick="checkAgeInput()">ENTER</button>
+            </div>
+
+            <p class="legal-warning">
+                Dionísio Gin & Vodka precisa coletar essa informação para ter certeza da idade legal do usuário para acessar nosso site de acordo com as leis aplicáveis. Para mais informações, consulte nossa <a href="#">Política de Privacidade</a>.<br>
+                ©2025 Dionísio Gin & Vodka.
+            </p>
+        </div>
+    </div>
+
+    <div class="floating-controls">
+        <button class="float-btn btn-theme" onclick="toggleTheme()" title="Trocar Tema">
+            <i class="ph ph-moon" id="theme-icon"></i>
+        </button>
+        <a href="#" class="float-btn btn-whatsapp" title="Fale conosco via WhatsApp">
+            <i class="ph-fill ph-whatsapp-logo"></i>
+        </a>
+    </div>
+
+ <header>
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <img src="img/logob.png" alt="Dionísio" class="logo-img logo-b">
+                <img src="img/logop.png" alt="Dionísio" class="logo-img logo-p">
+            </a>
+            
+            <div class="mobile-toggle" onclick="toggleMenu()">
+                <i class="ph ph-list"></i>
+            </div>
+
+            <nav class="nav-menu">
+                <div class="close-menu" onclick="toggleMenu()">
+                    <i class="ph ph-x"></i>
+                </div>
+
+                <ul class="nav-links">
+                    <li><a href="#sobre" onclick="toggleMenu()">Sobre</a></li>
+                    <li><a href="#produtos" onclick="toggleMenu()">Loja</a></li>
+                    <li><a href="#atacado" onclick="toggleMenu()">Atacado</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container hero-content">
+            <h1>O PRAZER <br><span>Sem Regras</span></h1>
+            
+            <h3>Não vendemos garrafas. Vendemos noites que viram história.</h3>
+            
+            <div class="hero-buttons">
+                <a href="#produtos" class="btn btn-primary">
+                  Comprar agora!
+                </a>
+                
+                <a href="https://wa.me/5511999999999" target="_blank" class="btn btn-outline">
+                   Revender
+                </a>
+            </div>
+
+            <p style="margin-top: 25px; font-size: 0.85rem; color: #e0e0e0; opacity: 0.9; font-weight: 600; letter-spacing: 0.5px; text-shadow: 0 2px 4px rgba(0,0,0,0.8);">
+                Viva a Experiência Dionisio &nbsp;|&nbsp; Venda apenas para maiores de 18 anos
+            </p>
+        </div>
+    </section>
+
+    <section id="sobre" class="section-padding manifesto-section">
+        <div class="container">
+            <div class="manifesto-wrapper">
+                
+                <div class="manifesto-header">
+                    <img src="img/titulo.png" alt="Dionísio" class="manifesto-title-png">
+                </div>
+
+                <div class="manifesto-text">
+                    <p>
+                        Dionísio nasceu na rua, na festa que começou de improviso e virou tradição. 
+                        Inspirados no deus que transformava vinho em êxtase, criamos duas linhas: 
+                        <strong>Dionísio Gin</strong>, um London Dry honesto, botânico e direto, e 
+                        <strong>Dionísio Vodka</strong>, pura, equilibrada e pronta para elevar qualquer drink.
+                    </p>
+                    <p>
+                        Nossa missão? Entregar experiências: o ritual do copo, o som da risada, a história que você conta depois. 
+                        Design autoral, produção brasileira e curadoria para quem escolhe celebrar com intensidade, sem frescura.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="showcase-section">
+        <div class="bottle-wrapper">
+            <img src="img/garrafa.png" alt="Garrafa Dionísio" class="hero-bottle">
+        </div>
+        <div class="marquee-container">
+            <div class="marquee-track">
+                <img src="img/1.png" alt="Rótulo 1">
+                <img src="img/3.png" alt="Rótulo 3">
+                <img src="img/1.png" alt="Rótulo 1">
+                <img src="img/3.png" alt="Rótulo 3">
+                <img src="img/1.png" alt="Rótulo 1">
+                <img src="img/3.png" alt="Rótulo 3">
+                <img src="img/1.png" alt="Rótulo 1">
+                <img src="img/3.png" alt="Rótulo 3">
+            </div>
+        </div>
+    </section>
+
+    <section id="produtos" class="section-padding products">
+        <div class="container">
+            <div class="section-title">
+                <h2>Escolha sua forma de brindar:</h2>
+            </div>
+        </div>
+
+        <div class="dionisio-split">
+            
+            <div class="split-card blue-card">
+                <div class="split-content-wrapper">
+                    <div class="split-bottle-col">
+                        <img src="img/g1.png" alt="Gin Dionísio" class="split-bottle-img">
+                    </div>
+                    <div class="split-info-col">
+                        <h3>GIN</h3>
+                        <span class="split-subtitle">LIBERDADE EM CADA GOLE</span>
+                        
+                        <ul class="split-features">
+                            <li><i class="ph-fill ph-drop"></i> London Dry</li>
+                            <li><i class="ph-fill ph-martini"></i> ABV 40%</li>
+                            <li><i class="ph-fill ph-plant"></i> Feito com zimbro, cítricos e especiarias</li>
+                        </ul>
+
+                        <button class="btn-cta-white" onclick="openModal('modal-gin')">
+                            Experimente nosso gin
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="split-card red-card">
+                <div class="split-content-wrapper">
+                    <div class="split-bottle-col">
+                        <img src="img/g2.png" alt="Vodka Dionísio" class="split-bottle-img">
+                    </div>
+                    <div class="split-info-col">
+                        <span class="split-subtitle">PURA, PRESENTE, POTENTE</span>
+                        
+                        <ul class="split-features">
+                            <li><i class="ph-fill ph-drop"></i> Filtrada e neutra</li>
+                            <li><i class="ph-fill ph-martini"></i> ABV 40%</li>
+                            <li><i class="ph-fill ph-sparkle"></i> Ideal para clássicos e contemporâneos</li>
+                        </ul>
+
+                        <button class="btn-cta-white" onclick="openModal('modal-vodka')">
+                            Experimente nossa vodka
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="container">
+            <div style="text-align: center; margin-top: 40px; opacity: 0.7; font-size: 0.9rem;">
+                <p><i class="ph ph-info"></i> Embalagens limitadas com rótulos especiais (lançamentos sazonais).</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="receitas" class="recipes-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Mixologia Dionísio</h2>
+                <p style="color: #fff;">A arte de beber bem</p>
+            </div>
+
+            <div class="carousel-wrapper">
+                
+                <button class="carousel-btn btn-prev" onclick="scrollCarousel(-1)">
+                    <i class="ph ph-caret-left"></i>
+                </button>
+
+                <div class="recipes-carousel" id="recipesTrack">
+                    
+                    <div class="recipe-card" onclick="toggleRecipe(this)">
+                        <img src="img/negroni.png" alt="Negroni">
+                        <div class="card-name">
+                            <h3>Negroni</h3>
+                        </div>
+                        <div class="recipe-overlay">
+                            <h3>Negroni</h3>
+                            <div class="recipe-content">
+                                <ul class="ingredients">
+                                    <li>30ml Dionísio Gin</li>
+                                    <li>30ml Campari</li>
+                                    <li>30ml Vermute Rosso</li>
+                                    <li>Casca de Laranja</li>
+                                </ul>
+                                <div class="prep">
+                                    <strong>Preparo:</strong><br>
+                                    Misture tudo com gelo no mixing glass. Coe para um copo baixo com gelão. Decore com a laranja.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="recipe-card" onclick="toggleRecipe(this)">
+                        <img src="img/mule.png" alt="Moscow Mule">
+                        <div class="card-name">
+                            <h3>Moscow Mule</h3>
+                        </div>
+                        <div class="recipe-overlay">
+                            <h3>Moscow Mule</h3>
+                            <div class="recipe-content">
+                                <ul class="ingredients">
+                                    <li>50ml Dionísio Vodka</li>
+                                    <li>20ml Suco de Limão</li>
+                                    <li>Xarope de Gengibre</li>
+                                    <li>Água com Gás</li>
+                                </ul>
+                                <div class="prep">
+                                    <strong>Preparo:</strong><br>
+                                    Na caneca com gelo, adicione vodka, limão e xarope. Complete com água com gás e misture suavemente.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="recipe-card" onclick="toggleRecipe(this)">
+                        <img src="img/gt.png" alt="Gin Tônica">
+                        <div class="card-name">
+                            <h3>Dionísio Tonic</h3>
+                        </div>
+                        <div class="recipe-overlay">
+                            <h3>Dionísio Tonic</h3>
+                            <div class="recipe-content">
+                                <ul class="ingredients">
+                                    <li>50ml Dionísio Gin</li>
+                                    <li>150ml Água Tônica</li>
+                                    <li>1 Rodela de Limão</li>
+                                    <li>Ramo de Alecrim</li>
+                                </ul>
+                                <div class="prep">
+                                    <strong>Preparo:</strong><br>
+                                    Encha a taça de gelo. Adicione o gin e a tônica. Finalize com limão e bata o alecrim antes de decorar.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="recipe-card" onclick="toggleRecipe(this)">
+                        <img src="img/espresso.png" alt="Espresso Martini">
+                        <div class="card-name">
+                            <h3>Espresso Martini</h3>
+                        </div>
+                        <div class="recipe-overlay">
+                            <h3>Espresso Martini</h3>
+                            <div class="recipe-content">
+                                <ul class="ingredients">
+                                    <li>40ml Dionísio Vodka</li>
+                                    <li>30ml Café Espresso</li>
+                                    <li>20ml Licor de Café</li>
+                                    <li>Grãos de café</li>
+                                </ul>
+                                <div class="prep">
+                                    <strong>Preparo:</strong><br>
+                                    Bata tudo vigorosamente na coqueteleira com gelo. Coe duplamente para taça gelada.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="recipe-card" onclick="toggleRecipe(this)">
+                        <img src="img/cosmo.png" alt="Cosmopolitan">
+                        <div class="card-name">
+                            <h3>Cosmopolitan</h3>
+                        </div>
+                        <div class="recipe-overlay">
+                            <h3>Cosmopolitan</h3>
+                            <div class="recipe-content">
+                                <ul class="ingredients">
+                                    <li>40ml Dionísio Vodka</li>
+                                    <li>15ml Cointreau</li>
+                                    <li>15ml Suco de Lima</li>
+                                    <li>30ml Suco Cranberry</li>
+                                </ul>
+                                <div class="prep">
+                                    <strong>Preparo:</strong><br>
+                                    Bata na coqueteleira com gelo. Sirva na taça martini sem gelo. Twist de laranja para decorar.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="recipe-card" onclick="toggleRecipe(this)">
+                        <img src="img/bramble.png" alt="Bramble">
+                        <div class="card-name">
+                            <h3>Bramble</h3>
+                        </div>
+                        <div class="recipe-overlay">
+                            <h3>Bramble</h3>
+                            <div class="recipe-content">
+                                <ul class="ingredients">
+                                    <li>50ml Dionísio Gin</li>
+                                    <li>25ml Suco de Limão</li>
+                                    <li>15ml Xarope de Açúcar</li>
+                                    <li>Licor de Amora</li>
+                                </ul>
+                                <div class="prep">
+                                    <strong>Preparo:</strong><br>
+                                    Monte no copo com gelo picado (exceto o licor). Misture. Despeje o licor de amora por cima (efeito visual).
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <button class="carousel-btn btn-next" onclick="scrollCarousel(1)">
+                    <i class="ph ph-caret-right"></i>
+                </button>
+            </div>
+            
+            <p style="text-align: center; margin-top: 30px; color: #fff; opacity: 0.7; font-size: 0.9rem;">
+                <i class="ph ph-hand-tap"></i> Toque ou passe o mouse para ver a receita
+            </p>
+        </div>
+    </section>
+
+    <div id="modal-gin" class="modal-overlay" onclick="closeModal(event, 'modal-gin')">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal(null, 'modal-gin')">&times;</span>
+            <div class="modal-body">
+                <h3>Gin — London Dry</h3>
+                <p class="modal-desc">Um espírito rebelde engarrafado. Nosso London Dry respeita a tradição, mas brinca com o caos. Destilado em pequenos lotes para garantir que o zimbro brilhe e os cítricos cortem a mesmice.</p>
+                <div class="modal-grid">
+                    <div class="modal-box">
+                        <h4><i class="ph ph-clipboard-text"></i> Ficha Técnica</h4>
+                        <ul>
+                            <li><strong>Tipo:</strong> London Dry Gin</li>
+                            <li><strong>ABV:</strong> 40%</li>
+                            <li><strong>Volume:</strong> 750ml</li>
+                            <li><strong>Origem:</strong> Brasil</li>
+                        </ul>
+                    </div>
+                    <div class="modal-box">
+                        <h4><i class="ph ph-wine"></i> Serviço</h4>
+                        <p>Sirva com bastante gelo. Copo balloon ou tumbler baixo.</p>
+                        <p><strong>Notas:</strong> Seco, pinho fresco, final cítrico longo.</p>
+                    </div>
+                </div>
+                <div class="modal-recipe">
+                    <h4><i class="ph ph-martini"></i> Signature Drink: "Caos Tônico"</h4>
+                    <p>50ml Dionísio Gin + 150ml Água Tônica Premium + 1 Fatia de Grapefruit + Pimenta Rosa. <br><em>Misture suavemente e brinde ao agora.</em></p>
+                </div>
+                <a href="#" class="btn btn-primary" style="margin-top: 20px; width: 100%;">ADICIONAR AO CARRINHO - R$ 129,90</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-vodka" class="modal-overlay" onclick="closeModal(event, 'modal-vodka')">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal(null, 'modal-vodka')">&times;</span>
+            <div class="modal-body">
+                <h3>Vodka — Premium</h3>
+                <p class="modal-desc">Invisível até o primeiro gole. Nossa vodka passa por 5 destilações e filtragem rigorosa para entregar pureza absoluta. Ela não briga com seu drink; ela o eleva.</p>
+                <div class="modal-grid">
+                    <div class="modal-box">
+                        <h4><i class="ph ph-clipboard-text"></i> Ficha Técnica</h4>
+                        <ul>
+                            <li><strong>Tipo:</strong> Vodka Premium</li>
+                            <li><strong>ABV:</strong> 40%</li>
+                            <li><strong>Volume:</strong> 750ml</li>
+                            <li><strong>Filtragem:</strong> Carvão Ativado</li>
+                        </ul>
+                    </div>
+                    <div class="modal-box">
+                        <h4><i class="ph ph-wine"></i> Serviço</h4>
+                        <p>Beba gelada (freezer) ou em mixologia.</p>
+                        <p><strong>Notas:</strong> Neutra, textura aveludada, sem queimação.</p>
+                    </div>
+                </div>
+                <div class="modal-recipe">
+                    <h4><i class="ph ph-martini"></i> Signature Drink: "Dionísio Mule"</h4>
+                    <p>50ml Dionísio Vodka + 20ml Limão + Top de Espuma de Gengibre. <br><em>Sirva na caneca de cobre com muito gelo.</em></p>
+                </div>
+                <a href="#" class="btn btn-primary" style="margin-top: 20px; width: 100%;">ADICIONAR AO CARRINHO - R$ 99,90</a>
+            </div>
+        </div>
+    </div>
+
+    <section class="section-padding retail">
+        <div class="container">
+            <div class="section-title">
+                <span style="font-family: var(--font-body); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 2px; color: var(--text-muted); display: block; margin-bottom: 10px;">
+                    Cada etapa da sua experiência
+                </span>
+                <h3 style="font-size: 2rem;">Do clique ao brinde</h3>
+            </div>
+
+            <div class="retail-process" style="margin-bottom: 20px;">
+                <div class="process-step">
+                    <div class="step-icon"><i class="ph ph-desktop"></i></div>
+                    <h4>1. Escolha Online</h4>
+                    <p>Interface intuitiva e segura para você escolher seus rótulos favoritos.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-icon"><i class="ph ph-package"></i></div>
+                    <h4>2. Envio Seguro</h4>
+                    <p>Embalagem anti-impacto certificada para garrafas de vidro.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-icon"><i class="ph ph-cheers"></i></div>
+                    <h4>3. O Ritual</h4>
+                    <p>Receba receitas exclusivas e playlists para acompanhar sua bebida.</p>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-bottom: 60px; color: var(--text-muted); font-size: 0.9rem; opacity: 0.8;">
+                <i class="ph ph-identification-card" style="font-size: 1.2rem; vertical-align: sub; margin-right: 5px; color: var(--color-red);"></i>
+                Entregamos para maiores de 18 anos. <strong>ID obrigatório no ato da entrega.</strong>
+            </div>
+
+            <div class="offer-banner">
+                <div class="offer-layout">
+                    <div class="offer-img-wrapper">
+                        <img src="img/kit.png" alt="Kit Primeira Dose Dionísio">
+                    </div>
+                    <div class="offer-content">
+                        <span class="offer-tag">OFERTA EXCLUSIVA</span>
+                        <h4 style="color: white;">Kit "Primeira Dose"</h4>
+                        <p>Leve o par Gin + Vodka com Copo Exclusivo Dionísio e ganhe <strong>15% OFF + Frete Grátis</strong>.</p>
+                        <a href="#" class="btn btn-primary">Quero meu Kit</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="atacado" class="section-padding wholesale">
+        <div class="container">
+            <div class="section-title">
+                <h3>Parceiros & Atacado</h3>
+                <p>Dionísio no seu negócio</p>
+            </div>
+
+            <div class="wholesale-layout">
+                <div class="wholesale-info">
+                    <h3>Eleve o nível do seu bar</h3>
+                    <p>Condições comerciais desenhadas para Bares, Restaurantes e Empórios. Transforme sua prateleira em um ponto de desejo.</p>
+                    
+                    <div class="benefits-grid">
+                        <div class="benefit-card">
+                            <i class="ph ph-cube"></i>
+                            <h4>Pedido Flexível</h4>
+                            <p>Mínimo de apenas 5 caixas.</p>
+                        </div>
+                        <div class="benefit-card">
+                            <i class="ph ph-trend-down"></i>
+                            <h4>Preço Competitivo</h4>
+                            <p>Tabela progressiva de descontos.</p>
+                        </div>
+                        <div class="benefit-card">
+                            <i class="ph ph-sticker"></i>
+                            <h4>Material PDV</h4>
+                            <p>Cartas de drinks e bolachas inclusas.</p>
+                        </div>
+                        <div class="benefit-card">
+                            <i class="ph ph-file-text"></i>
+                            <h4>Faturamento</h4>
+                            <p>Boleto 28/56 dias (sujeito a análise).</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="wholesale-form">
+                    <h4 style="margin-bottom: 25px; color: var(--color-red);">Solicitar Cotação</h4>
+                   <form id="b2b-form" onsubmit="handleFormSubmit(event)">
+                        <div class="form-group">
+                            <label>Nome da Empresa / Bar</label>
+                            <input type="text" placeholder="Ex: Dionísio Pub" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>CNPJ</label>
+                            <input type="text" id="cnpj" placeholder="00.000.000/0000-00" maxlength="18" inputmode="numeric" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>WhatsApp do Comprador</label>
+                            <input type="tel" id="whatsapp" placeholder="(11) 99999-9999" maxlength="15" inputmode="numeric" required>
+                        </div>
+                        
+                        <div class="form-group checkbox-group">
+                            <input type="checkbox" id="age-confirm" required>
+                            <label for="age-confirm">Declaro que sou maior de 18 anos e concordo com a política de privacidade.</label>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">
+                            Enviar Solicitação <i class="ph ph-paper-plane-right"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="section-padding">
+        <div class="container" style="max-width: 800px;"> 
+            <div class="section-title">
+                <h3>Perguntas Frequentes</h3>
+                <p>Tire suas dúvidas</p>
+            </div>
+
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Vocês entregam para todo o Brasil?
+                        <i class="ph ph-caret-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Entregamos via transportadora — frete calculado no checkout. Entrega expressa disponível em SP e região.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Posso comprar uma única garrafa?
+                        <i class="ph ph-caret-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Sim — venda varejo por unidade na loja.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Como funciona a venda por atacado?
+                        <i class="ph ph-caret-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Preencha o formulário B2B acima; enviamos uma proposta personalizada com prazos, brindes e nossa tabela de preços exclusiva para parceiros.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Vendas apenas para maiores de 18?
+                        <i class="ph ph-caret-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Sim — exigimos verificação de idade no checkout e documento de identificação com foto no ato da entrega.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4 class="logo" style="font-size: 1.8rem;">
+                        <img src="img/logob.png" alt="Dionísio" class="logo-img logo-b">
+                        <img src="img/logop.png" alt="Dionísio" class="logo-img logo-p">
+                    </h4>
+                    
+                    <p style="font-size: 0.9rem; margin-top: 15px;">Bebidas premium para quem sabe apreciar os detalhes.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Navegação</h4>
+                    <ul>
+                        <li><a href="#produtos">Loja Online</a></li>
+                        <li><a href="#atacado">Atacado</a></li>
+                        <li><a href="#sobre">Manifesto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Política de Privacidade</a></li>
+                        <li><a href="#">Termos de Uso</a></li>
+                        <li><a href="#">Política de Trocas</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Social</h4>
+                    <a href="#" style="display: flex; align-items: center; gap: 10px; color: var(--text-muted);">
+                        <i class="ph ph-instagram-logo" style="font-size: 24px; color: var(--color-red);"></i>
+                        @dionisio.oficial
+                    </a>
+                </div>
+            </div>
+            <div class="legal">
+                Venda e consumo proibidos para menores de 18 anos. Beba com moderação. Se beber, não dirija. © 2025 Dionísio.
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
